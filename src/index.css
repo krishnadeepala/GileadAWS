@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: "Segoe UI", "Segoe UI Web (West European)", -apple-system,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+
+  --color-gilead-red: #c50f3c;
+  --color-gilead-red-dark: #a30c31;
+  --color-gilead-red-tint: #fbe7ec;
+  --color-gilead-black: #1e1e1e;
+  --color-gilead-gray: #54565b;
+  --color-gilead-stone: #c6cac6;
+
+  --color-ink: #1e1e1e;
+  --color-muted: #54565b;
+  --color-line: #e4e6e4;
+  --color-surface: #ffffff;
+  --color-canvas: #f6f7f6;
+
+  --color-success: #2e7d5b;
+  --color-success-tint: #e6f3ec;
+  --color-warning: #b26a00;
+  --color-warning-tint: #fbeed6;
+  --color-danger: #c23b3b;
+  --color-danger-tint: #fbe9e9;
+  --color-info: #2a5f9e;
+  --color-info-tint: #e7eff8;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hide scrollbars until scrolling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover {
+  scrollbar-color: var(--color-stone, #c6cac6) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+*:hover::-webkit-scrollbar-thumb {
+  background: #cdd0cd;
+  background-clip: content-box;
+}
